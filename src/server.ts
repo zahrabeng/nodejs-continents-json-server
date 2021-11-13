@@ -1,31 +1,20 @@
 import express from "express";
+import { ASIA, OCEANIA } from "./continents";
 import filePath from "./filePath";
 
 const app = express();
 
 app.get("/", (req, res) => {
-  const pathToFile = filePath("/pages/index.html");
+  const pathToFile = filePath("/index.html");
   res.sendFile(pathToFile);
 })
 
 app.get("/asia", (req, res) => {
-  const pathToFile = filePath("/pages/asia.html");
-  res.sendFile(pathToFile);
-});
-
-app.get("/europe", (req, res) => {
-  const pathToFile = filePath("/pages/europe.html");
-  res.sendFile(pathToFile);
+  res.json(ASIA)
 });
 
 app.get("/oceania", (req, res) => {
-  const pathToFile = filePath("/pages/oceania.html");
-  res.sendFile(pathToFile);
-});
-
-app.get("/south-america", (req, res) => {
-  const pathToFile = filePath("/pages/south-america.html");
-  res.sendFile(pathToFile);
+  res.json(OCEANIA);
 });
 
 // using 4000 by convention, but could be changed
