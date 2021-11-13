@@ -1,4 +1,4 @@
-# Continents HTML Server
+# Continents JSON Server
 
 ### Install dependencies
 ```
