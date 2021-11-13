@@ -1,10 +1,26 @@
 import express from "express";
-import path from 'path';
+import filePath from "./filePath";
 
 const app = express();
 
+app.get("/asia", (req, res) => {
+  const pathToFile = filePath("/pages/asia.html");
+  res.sendFile(pathToFile);
+});
+
+app.get("/europe", (req, res) => {
+  const pathToFile = filePath("/pages/europe.html");
+  res.sendFile(pathToFile);
+});
+
 app.get("/oceania", (req, res) => {
-  res.sendFile(path.join(__dirname, "/pages/oceania.html"));
+  const pathToFile = filePath("/pages/oceania.html");
+  res.sendFile(pathToFile);
+});
+
+app.get("/south-america", (req, res) => {
+  const pathToFile = filePath("/pages/south-america.html");
+  res.sendFile(pathToFile);
 });
 
 // using 4000 by convention, but could be changed
