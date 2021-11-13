@@ -3,6 +3,11 @@ import filePath from "./filePath";
 
 const app = express();
 
+app.get("/", (req, res) => {
+  const pathToFile = filePath("/pages/index.html");
+  res.sendFile(pathToFile);
+})
+
 app.get("/asia", (req, res) => {
   const pathToFile = filePath("/pages/asia.html");
   res.sendFile(pathToFile);
