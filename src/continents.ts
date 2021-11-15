@@ -14,7 +14,7 @@ interface Continent {
     };
     /** Number between 0-100 */
     pctOfTotal: number;
-  }
+  };
 }
 
 export const ASIA: Continent = {
@@ -22,13 +22,13 @@ export const ASIA: Continent = {
   area: {
     sqKm: 44_614_000,
     sqMiles: 17_226_000,
-    pctOfTotal: 29.8
+    pctOfTotal: 29.8,
   },
   highestPoint: "Mount Everest",
   population: {
     people: { count: 4.6, unit: "billion" },
-    pctOfTotal: 60
-  }
+    pctOfTotal: 60,
+  },
 };
 
 export const OCEANIA: Continent = {

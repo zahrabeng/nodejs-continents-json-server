@@ -7,10 +7,10 @@ const app = express();
 app.get("/", (req, res) => {
   const pathToFile = filePath("/index.html");
   res.sendFile(pathToFile);
-})
+});
 
 app.get("/asia", (req, res) => {
-  res.json(ASIA)
+  res.json(ASIA);
 });
 
 app.get("/oceania", (req, res) => {
